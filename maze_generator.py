@@ -1,5 +1,5 @@
 import random
-import matplotlib.pyplot as plt
+
 import numpy as np
 from collections import deque
 
@@ -220,34 +220,34 @@ def solve_maze(maze, start, end):
 
     return [[]]  # Return an empty list if no path is found
 
-def visualize_3d_maze(maze, path=None):
-    """
-    Visualize the 3D maze using matplotlib.
-    """
-    fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
-
-    dim_x = len(maze)
-    dim_y = len(maze[0])
-    dim_z = len(maze[0][0])
-
-    # Plot each cell in the maze
-    for x in range(dim_x):
-        for y in range(dim_y):
-            for z in range(dim_z):
-                if maze[x][y][z] == 1:  # Wall
-                    ax.bar3d(x, y, z, 1, 1, 1, color="black", alpha=0.05)
-
-    # Highlight the solving path
-    if path:
-        px, py, pz = zip(*path)
-        ax.plot(px, py, pz, color="red", linewidth=2, label="Solution Path")
-
-    ax.set_xlabel("X Axis")
-    ax.set_ylabel("Y Axis")
-    ax.set_zlabel("Z Axis")
-    plt.legend()
-    plt.show()
+# def visualize_3d_maze(maze, path=None):
+#     """
+#     Visualize the 3D maze using matplotlib.
+#     """
+#     fig = plt.figure()
+#     ax = fig.add_subplot(111, projection='3d')
+#
+#     dim_x = len(maze)
+#     dim_y = len(maze[0])
+#     dim_z = len(maze[0][0])
+#
+#     # Plot each cell in the maze
+#     for x in range(dim_x):
+#         for y in range(dim_y):
+#             for z in range(dim_z):
+#                 if maze[x][y][z] == 1:  # Wall
+#                     ax.bar3d(x, y, z, 1, 1, 1, color="black", alpha=0.05)
+#
+#     # Highlight the solving path
+#     if path:
+#         px, py, pz = zip(*path)
+#         ax.plot(px, py, pz, color="red", linewidth=2, label="Solution Path")
+#
+#     ax.set_xlabel("X Axis")
+#     ax.set_ylabel("Y Axis")
+#     ax.set_zlabel("Z Axis")
+#     plt.legend()
+#     plt.show()
 
 def print_3d_maze(maze):
     """
