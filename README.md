@@ -37,3 +37,17 @@ Show a 3D matplotlib preview of the maze after generation
 ```bash
 python 3DMaze.py --folder "./schematics" --dim_x 25 --dim_y 25 --dim_z 25 --filename my_maze --visualize
 ```
+
+## Prerequirements
+### Linux / MacOS:
+```shell
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+### Windows:
+```shell
+python -m venv venv
+.\venv\Scripts\activate.ps1
+pip install -r requirements.txt
+```
