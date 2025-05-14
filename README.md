@@ -3,7 +3,7 @@ A simple CLI tool to generate a 3D maze, solve it, and export it as a Minecraft 
 
 ## Usage
 ```bash
-python maze_cli.py --folder <output_folder> [options]
+python 3DMaze.py --folder <output_folder> [options]
 ```
 
 ## Required
@@ -35,5 +35,5 @@ Show a 3D matplotlib preview of the maze after generation
 
 ## Example
 ```bash
-python maze_cli.py --folder "./schematics" --dim_x 25 --dim_y 25 --dim_z 25 --filename my_maze --visualize
+python 3DMaze.py --folder "./schematics" --dim_x 25 --dim_y 25 --dim_z 25 --filename my_maze --visualize
 ```
